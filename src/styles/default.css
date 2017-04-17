@@ -1,0 +1,111 @@
+html, body, p {
+	padding: 0;
+	margin: 0;
+}
+
+.posts {
+	min-width: 1280px;
+}
+
+.post {
+	display: flex;
+	max-width: 640px;
+	max-height: 320px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	margin: 20px auto;
+}
+
+.post__photo {
+	display: inline-flex;
+}
+
+.post__content {
+	display: inline-flex;
+	flex-direction: column;
+	padding: 30px;
+	width: 50%;
+}
+
+.post__header {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-bottom: 1px solid #eeeeee;
+	padding: 0 0 20px;
+	margin: 0 0 20px;
+}
+
+.post__time {
+	font: 16px "Roboto-Regular", sans-serif;
+	color: #b3b3b3;
+}
+
+.post__header-time {
+	position: absolute;
+	right: 0;
+}
+
+.user__login {
+	font: bold 16px "Roboto-Regular", sans-serif;
+}
+
+.post__location {
+	font: 16px "Roboto-Regular", sans-serif;
+}
+
+.post__image {
+	width: 50%;
+}
+
+.like__icon {
+	max-height: 18px;
+	max-width: 18px;
+	margin: 0 10px 0 0;
+}
+
+.post__likes {
+	display: flex;
+	align-items: center;
+	margin: 0 0 10px;
+}
+
+.like__checkbox {
+	display: none;
+}
+
+.like__label {
+	font: 16px "Roboto-Regular", sans-serif;
+	user-select: none;
+	cursor: pointer;
+}
+
+.post__text {
+	font: 16px "Roboto-Regular", sans-serif;
+}
+
+.like__checkbox + .like__label::before {
+	content: "";
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 22px;
+    min-height: 22px;
+    margin: 0 10px 0 0;
+    background: url("../assets/icons/unlike.svg") center/22px 22px no-repeat;
+    cursor: pointer;
+}
+
+.like__checkbox:checked + .like__label::before {
+    background: url("../assets/icons/like.svg") center/22px 22px no-repeat;
+}
+
+.user__ava {
+	border-radius: 18px;
+	max-width: 36px;
+	max-height: 36px;
+	margin: 0 10px 0 0;
+}
+
+#templatePost {
+	display: block;
+}
